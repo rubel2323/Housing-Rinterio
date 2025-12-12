@@ -28,14 +28,14 @@
       <section class="navbar my-4 bg-[#F5F5F5]">
         <div class="navbar px-0">
           <div class="navbar-start">
-            <h1 class="text-2xl font-semibold flex gap-2">
+            <div class="text-2xl font-semibold flex gap-2">
               <div
                 class="bg-[#ABEF5F] rounded-full inline-block w-8 h-8 text-center"
               >
                 <i class="fa-solid fa-arrow-down rotate-230"></i>
               </div>
-              Rinterio
-            </h1>
+              <h1>Rinterio</h1>
+            </div>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -45,10 +45,11 @@
               <li><a href="">Blogs</a></li>
               <li><a>Contacts Us</a></li>
             </ul>
+            <!-- collapsible menu -->
           </div>
 
           <div class="navbar-end">
-            <div class="dropdown">
+            <div class="dropdown dropdown-end">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,60 +68,176 @@
               </div>
               <ul
                 tabindex="-1"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                class="menu menu-sm dropdown-content bg-base-300/80 rounded-box z-1 mt-3 w-40 p-1 shadow"
               >
                 <li><a>Home</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Portfolia</a></li>
                 <li><a href="">Blogs</a></li>
                 <li><a>Contacts Us</a></li>
+                <li class="flex gap-1 p-1 lg:hidden">
+                  <!-- Search Icon -->
+                  <div>
+                    <button
+                      class="btn btn-circle bg-white shadow hover:bg-base-300"
+                      aria-label="Search"
+                    >
+                      <i
+                        class="fa-solid fa-magnifying-glass text-sm text-base-content"
+                      ></i>
+                    </button>
+                    <!-- Cart Icon -->
+                    <button
+                      class="btn btn-circle bg-white shadow-sm hover:bg-base-300"
+                      aria-label="Cart"
+                    >
+                      <i
+                        class="fa-solid fa-cart-shopping text-sm text-base-content"
+                      ></i>
+                    </button>
+                  </div>
+                  <button
+                    class="flex-none btn bg-[#ABEF5F] rounded-full px-0.5"
+                  >
+                    Book Consult
+
+                    <div
+                      class="bg-black rounded-full w-4 h-4 text-md text-white font-semibold"
+                    >
+                      <i class="fa-solid fa-arrow-down rotate-230 text-sm"></i>
+                    </div>
+                  </button>
+                </li>
               </ul>
+              <!-- collapsible menu ends -->
             </div>
-            <!-- <a class="btn btn-ghost text-xl">Rinterio</a> -->
           </div>
         </div>
 
-        
+        <!-- Font-Awesome and DaisyUI Icons -->
+        <div class="gap-4 p-4 mr-20 hidden lg:flex">
+          <!-- Search Icon -->
+          <button
+            class="btn btn-circle bg-white shadow hover:bg-base-300"
+            aria-label="Search"
+          >
+            <i
+              class="fa-solid fa-magnifying-glass text-xl text-base-content"
+            ></i>
+          </button>
+          <!-- Cart Icon -->
+          <button
+            class="btn btn-circle bg-white shadow hover:bg-base-300"
+            aria-label="Cart"
+          >
+            <i class="fa-solid fa-cart-shopping text-xl text-base-content"></i>
+          </button>
+          <button class="flex-none btn bg-[#ABEF5F] rounded-full px-6">
+            <h3>Book Consult</h3>
 
-          <!-- Font-Awesome and DaisyUI Icons -->
-          <div class="flex gap-4 p-4 mr-20">
-            <!-- Search Icon -->
-            <button
-              class="btn btn-circle  bg-white shadow hover:bg-base-300"
-              aria-label="Search"
+            <div
+              class="bg-black rounded-full w-9 h-9 text-2xl text-white font-semibold"
             >
-              <i
-                class="fa-solid fa-magnifying-glass text-xl text-base-content"
-              ></i>
-            </button>
-
-            <!-- Cart Icon -->
-            <button
-              class="btn btn-circle bg-white shadow hover:bg-base-300"
-              aria-label="Cart"
-            >
-              <i
-                class="fa-solid fa-cart-shopping text-xl text-base-content"
-              ></i>
-            </button>
-             <button class="flex-none  btn bg-[#ABEF5F] rounded-full px-6">
-                Book Consult   
-
-                <div
-                class="bg-black rounded-full  w-9 h-9 text-2xl text-white font-semibold"
-              >
-                <i class="fa-solid fa-arrow-down rotate-230"></i>
-              </div>
-            </button>
-            
-
-
-          </div>
+              <i class="fa-solid fa-arrow-down rotate-230"></i>
+            </div>
+          </button>
         </div>
       </section>
     </header>
-    <!-- Main section started -->
-    <main></main>
+
+    <!-- Hero section -->
+    <section class="hero flex flex-col">
+      <!-- House Image -->
+      <div>
+        <img src="./assets/banner.png" alt="House Image" />
+      </div>
+      <div class="text-center space-y-8 my-8 px-2 m-4">
+        <h1 class="text-3xl lg:text-5xl font-extrabold">
+          A barn house of this design has a striking appearance
+        </h1>
+        <div class="lg:mx-45">
+          <h5 class="text-lg font-semibold">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents, and
+            large windows that flood the space with natural light.
+          </h5>
+        </div>
+
+        <!-- button -->
+        <button class="flex-none btn bg-[#ABEF5F80] rounded-full px-6">
+          <h3>View Details</h3>
+
+          <div
+            class="bg-[#ABEF5F80] rounded-full w-9 h-9 text-2xl font-semibold"
+          >
+            <i class="fa-solid fa-arrow-down rotate-230"></i>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- About Us section -->
+    <section class="about-us bg-[#F4F4F4] my-8">
+      <div class="mx-5 flex flex-col lg:flex-row gap-10 justify-between">
+        <!-- Text div -->
+
+        <div>
+          <div class="p-5 flex">
+            <h2
+              class="rounded-full bg-white text-black shadow p-1 w-28 text-center font-semibold"
+            >
+              <i class="fa-solid fa-arrow-down rotate-270"></i>
+              About Us
+            </h2>
+          </div>
+          <div class="p-5">
+            <h1 class="text-4xl font-bold">
+              We design thoughtful,<br />
+              liveable spaces
+            </h1>
+          </div>
+          <div class="p-5">
+            <p>
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </div>
+          <!-- commercial house -->
+          <div class="bg-white rounded-lg shadow flex gap-4 p-4">
+            <div>
+              <img src="./assets/commercial.png" alt="commercial house" />
+            </div>
+            <div>
+              <h3 class="text-lg font-medium">Commercial</h3>
+              <p>
+                The barn house captivates with its blend <br />
+                of rustic charm and modern.
+              </p>
+            </div>
+          </div>
+          <!-- Residential house -->
+          <div class="bg-white rounded-lg shadow flex gap-4 p-4 mt-3">
+            <div>
+              <img src="./assets/residential.png" alt="residential house" />
+            </div>
+            <div>
+              <h3 class="text-lg font-medium">Residential</h3>
+              <p>
+                The barn house captivates with its blend <br />
+                of rustic charm and modern.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image div -->
+        <div class="p-10 w-full lg:w-2/3">
+          <img src="./assets/second-house.png" alt="" />
+        </div>
+      </div>
+    </section>
+
     <!-- footer section -->
     <footer></footer>
   </body>
