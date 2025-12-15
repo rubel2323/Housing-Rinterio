@@ -20,9 +20,26 @@
       src="https://kit.fontawesome.com/ff85a4db4d.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Manrope font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+      .primary-font {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+
+    <!-- Common theme settings -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-button-one: #e76f51;
+        --color-background-primary: #fdf1ee;
+      }
+    </style>
   </head>
 
-  <body>
+  <body class="primary-font">
     <header class="">
       <!-- navbar section -->
       <section class="navbar my-4 bg-[#F5F5F5]">
@@ -178,83 +195,179 @@
       </div>
     </section>
 
-    <!-- About Us section -->
-    <section class="about-us bg-[#F4F4F4] my-8">
-      <div
-        class="mx-5 flex flex-col lg:flex-row gap-10 justify-between lg:px-10"
-      >
-        <!-- Text div -->
+    <div class="bg-[#F4F4F4]">
+      <!-- About Us section -->
+      <section class="about-us bg-[#F4F4F4] my-8">
+        <div
+          class="mx-5 flex flex-col lg:flex-row gap-10 justify-between lg:px-10"
+        >
+          <!-- Text div -->
 
-        <div>
-          <div class="flex items-center p-3">
-            <h2
-              class="rounded-full bg-white text-black shadow text-center font-semibold p-1 w-28"
+          <div>
+            <div class="flex items-center p-3">
+              <h2
+                class="rounded-full bg-white text-black shadow text-center font-semibold p-1 w-28"
+              >
+                <i class="fa-solid fa-arrow-down rotate-270"></i>
+                About Us
+              </h2>
+            </div>
+            <div class="p-3">
+              <h1 class="text-4xl font-bold">
+                We design thoughtful,<br />
+                liveable spaces
+              </h1>
+            </div>
+            <div class="p-3">
+              <p>
+                The barn house captivates with its blend of rustic charm and
+                modern sophistication, featuring weathered wood, sleek metal
+                accents.
+              </p>
+            </div>
+
+            <!-- House Projects -->
+            <div
+              class="lg:space-y-3 flex lg:flex flex-col md:flex-row lg:flex-col gap-2 justify-around"
             >
-              <i class="fa-solid fa-arrow-down rotate-270"></i>
-              About Us
-            </h2>
-          </div>
-          <div class="p-3">
-            <h1 class="text-4xl font-bold">
-              We design thoughtful,<br />
-              liveable spaces
-            </h1>
-          </div>
-          <div class="p-3">
-            <p>
-              The barn house captivates with its blend of rustic charm and
-              modern sophistication, featuring weathered wood, sleek metal
-              accents.
-            </p>
+              <!-- commercial house -->
+              <div
+                class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+              >
+                <div>
+                  <img src="./assets/commercial.png" alt="commercial house" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Commercial</h3>
+                  <p>
+                    The barn house captivates with its blend <br />
+                    of rustic charm and modern.
+                  </p>
+                </div>
+              </div>
+              <!-- Residential house -->
+              <div
+                class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+              >
+                <div>
+                  <img src="./assets/residential.png" alt="residential house" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Residential</h3>
+                  <p>
+                    The barn house captivates with its blend <br />
+                    of rustic charm and modern.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- House Projects -->
+          <!-- Image div -->
+          <div class="p-2 md:p-2 w-full">
+            <img
+              src="./assets/second-house.png"
+              alt=""
+              class="w-full rounded-lg lg:w-[87%] lg:m-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics section -->
+
+      <section class="statistics">
+        <div class="py-10 lg:mr-10">
           <div
-            class="lg:space-y-3 flex lg:flex flex-col md:flex-row lg:flex-col gap-2 justify-around"
+            class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-5 bg-white rounded-xl shadow mx-10 lg:mx-13 p-6"
           >
-            <!-- commercial house -->
-            <div
-              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
-            >
-              <div>
-                <img src="./assets/commercial.png" alt="commercial house" />
-              </div>
-              <div>
-                <h3 class="text-lg font-medium">Commercial</h3>
-                <p>
-                  The barn house captivates with its blend <br />
-                  of rustic charm and modern.
-                </p>
+            <!-- Card No -1 -->
+            <div class="card">
+              <div class="card-body items-center">
+                <div class="text-blue-400 text-7xl text-center">
+                  <i class="fa-regular fa-message"></i>
+                </div>
+                <h2 class="card-title">
+                  235<span class="text-gray-800 text-sm badge badge-info"
+                    >+</span
+                  >
+                </h2>
+                <p class="text-sm text-gray-900">Happy Client Review</p>
               </div>
             </div>
-            <!-- Residential house -->
-            <div
-              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
-            >
-              <div>
-                <img src="./assets/residential.png" alt="residential house" />
+            <!-- Card No-2 -->
+            <div class="card">
+              <div class="card-body items-center">
+                <div class="text-blue-400 text-7xl text-center">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <h2 class="card-title">
+                  50<span class="text-gray-800 text-sm badge badge-info"
+                    >+</span
+                  >
+                </h2>
+                <p class="text-sm text-gray-900">Work Departments</p>
               </div>
-              <div>
-                <h3 class="text-lg font-medium">Residential</h3>
-                <p>
-                  The barn house captivates with its blend <br />
-                  of rustic charm and modern.
-                </p>
+            </div>
+            <!-- Card No-3 -->
+            <div class="card">
+              <div class="card-body items-center">
+                <div class="text-blue-400 text-7xl text-center">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h2 class="card-title">
+                  30K<span class="text-gray-800 text-sm badge badge-info"
+                    >+</span
+                  >
+                </h2>
+                <p class="text-sm text-gray-900">Our Happy Client</p>
+              </div>
+            </div>
+            <!-- Card No-4 -->
+            <div class="card">
+              <div class="card-body items-center">
+                <div class="text-blue-400 text-7xl text-center">
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <h2 class="card-title">
+                  307<span class="text-gray-800 text-sm badge badge-info"
+                    >+</span
+                  >
+                </h2>
+                <p class="text-sm text-gray-900">Staff Members</p>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Image div -->
-        <div class="p-2 md:p-2 lg:p- w-full">
-          <img
-            src="./assets/second-house.png"
-            alt=""
-            class="w-full rounded-lg lg:w-[87%] lg:mx-auto"
-          />
+      <!-- Working Process -->
+      <section class="working-process mx-33">
+        <div class="py-5 mx-auto text-center w-40">
+          <h4 class="bg-white rounded-lg shadow">
+            <span>
+              <i class="fa-solid fa-arrow-down rotate-270 p-0.5"></i
+            ></span>
+            How we work
+          </h4>
         </div>
-      </div>
-    </section>
+
+        <div class="text-center">
+          <h1 class="text-5xl font-bold">Our Works Process</h1>
+          <p class="py-6">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication,<br />
+            featuring weathered wood, sleek metal accents.
+          </p>
+        </div>
+        <div class="working-sector">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+    </div>
 
     <!-- footer section -->
     <footer></footer>
