@@ -132,6 +132,8 @@
           >
             <i class="fa-solid fa-cart-shopping text-xl text-base-content"></i>
           </button>
+          <!-- Theme Toggle -->
+
           <button class="flex-none btn bg-[#ABEF5F] rounded-full px-6">
             <h3>Book Consult</h3>
 
@@ -165,7 +167,7 @@
 
         <!-- button -->
         <button class="flex-none btn bg-[#ABEF5F80] rounded-full px-6">
-          <h3>View Details</h3>
+          View Details
 
           <div
             class="bg-[#ABEF5F80] rounded-full w-9 h-9 text-2xl font-semibold"
@@ -178,62 +180,78 @@
 
     <!-- About Us section -->
     <section class="about-us bg-[#F4F4F4] my-8">
-      <div class="mx-5 flex flex-col lg:flex-row gap-10 justify-between">
+      <div
+        class="mx-5 flex flex-col lg:flex-row gap-10 justify-between lg:px-10"
+      >
         <!-- Text div -->
 
         <div>
-          <div class="p-5 flex">
+          <div class="flex items-center p-3">
             <h2
-              class="rounded-full bg-white text-black shadow p-1 w-28 text-center font-semibold"
+              class="rounded-full bg-white text-black shadow text-center font-semibold p-1 w-28"
             >
               <i class="fa-solid fa-arrow-down rotate-270"></i>
               About Us
             </h2>
           </div>
-          <div class="p-5">
+          <div class="p-3">
             <h1 class="text-4xl font-bold">
               We design thoughtful,<br />
               liveable spaces
             </h1>
           </div>
-          <div class="p-5">
+          <div class="p-3">
             <p>
               The barn house captivates with its blend of rustic charm and
               modern sophistication, featuring weathered wood, sleek metal
               accents.
             </p>
           </div>
-          <!-- commercial house -->
-          <div class="bg-white rounded-lg shadow flex gap-4 p-4">
-            <div>
-              <img src="./assets/commercial.png" alt="commercial house" />
+
+          <!-- House Projects -->
+          <div
+            class="lg:space-y-3 flex lg:flex flex-col md:flex-row lg:flex-col gap-2 justify-around"
+          >
+            <!-- commercial house -->
+            <div
+              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+            >
+              <div>
+                <img src="./assets/commercial.png" alt="commercial house" />
+              </div>
+              <div>
+                <h3 class="text-lg font-medium">Commercial</h3>
+                <p>
+                  The barn house captivates with its blend <br />
+                  of rustic charm and modern.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-lg font-medium">Commercial</h3>
-              <p>
-                The barn house captivates with its blend <br />
-                of rustic charm and modern.
-              </p>
-            </div>
-          </div>
-          <!-- Residential house -->
-          <div class="bg-white rounded-lg shadow flex gap-4 p-4 mt-3">
-            <div>
-              <img src="./assets/residential.png" alt="residential house" />
-            </div>
-            <div>
-              <h3 class="text-lg font-medium">Residential</h3>
-              <p>
-                The barn house captivates with its blend <br />
-                of rustic charm and modern.
-              </p>
+            <!-- Residential house -->
+            <div
+              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+            >
+              <div>
+                <img src="./assets/residential.png" alt="residential house" />
+              </div>
+              <div>
+                <h3 class="text-lg font-medium">Residential</h3>
+                <p>
+                  The barn house captivates with its blend <br />
+                  of rustic charm and modern.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Image div -->
-        <div class="p-10 w-full lg:w-2/3">
-          <img src="./assets/second-house.png" alt="" />
+        <div class="p-2 md:p-2 lg:p- w-full">
+          <img
+            src="./assets/second-house.png"
+            alt=""
+            class="w-full rounded-lg lg:w-[87%] lg:mx-auto"
+          />
         </div>
       </div>
     </section>
