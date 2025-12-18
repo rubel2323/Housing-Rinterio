@@ -30,10 +30,11 @@
       }
     </style>
 
-    <!-- Common theme settings -->
+    <!-- Custom theme for Tailwind CSS Play CDN -->
     <style type="text/tailwindcss">
       @theme {
         --color-button-one: #e76f51;
+        --color-button-two: #abef5f80;
         --color-background-primary: #fdf1ee;
         --color-text-light: #eefcdf;
         --color-card-background: #f4f4f4;
@@ -41,18 +42,19 @@
         --color-arrow-icon: #abef5f;
         --color-footer-primary: #e9e9e9;
         --color-footer-secondary: #737373;
+        --color-navbar: #f5f5f5;
       }
     </style>
   </head>
 
   <body class="primary-font">
     <!-- navbar section -->
-    <section class="navbar my-4 bg-[#F5F5F5]">
+    <section class="navbar my-4 bg-navbar">
       <div class="navbar">
         <div class="navbar-start">
           <div class="text-2xl font-semibold flex gap-2 justify-center py-5">
             <div
-              class="bg-[#ABEF5F] rounded-full flex w-8 h-8 text-center justify-center items-center"
+              class="bg-arrow-icon rounded-full flex w-8 h-8 text-center justify-center items-center"
             >
               <i class="fa-solid fa-arrow-down rotate-230"></i>
             </div>
@@ -72,7 +74,12 @@
 
         <div class="navbar-end">
           <div class="dropdown dropdown-end">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden"
+              aria-label="Toggle navigation menu"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -118,7 +125,7 @@
                     ></i>
                   </button>
                 </div>
-                <button class="flex btn bg-[#ABEF5F] rounded-full px-0.5">
+                <button class="flex btn bg-arrow-icon rounded-full px-0.5">
                   Book Consult
 
                   <div
@@ -152,7 +159,7 @@
         </button>
         <!-- Theme Toggle -->
 
-        <button class="flex-none btn bg-[#ABEF5F] rounded-full px-6">
+        <button class="flex-none btn bg-arrow-icon rounded-full px-6">
           <h3>Book Consult</h3>
 
           <div
@@ -183,11 +190,11 @@
         </div>
 
         <!-- button -->
-        <button class="flex-none btn bg-[#ABEF5F80] rounded-full px-6">
+        <button class="flex-none btn bg-button-two rounded-full px-6">
           View Details
 
           <div
-            class="bg-[#ABEF5F80] rounded-full w-9 h-9 text-2xl font-semibold"
+            class="bg-button-two rounded-full w-9 h-9 text-2xl font-semibold"
           >
             <i class="fa-solid fa-arrow-down rotate-230"></i>
           </div>
@@ -195,237 +202,225 @@
       </div>
     </section>
 
-    <div class="bg-[#F4F4F4]">
-      <!-- About Us section -->
-      <section class="about-us bg-[#F4F4F4] my-8">
-        <div
-          class="mx-5 flex flex-col lg:flex-row gap-10 justify-between lg:px-10"
-        >
-          <!-- Text div -->
+    <!-- About Us section -->
+    <section class="about-us bg-card-background my-8">
+      <div
+        class="mx-5 flex flex-col lg:flex-row gap-10 justify-between lg:px-10"
+      >
+        <!-- Text div -->
 
-          <div>
-            <div class="flex items-center p-3">
-              <h2
-                class="rounded-full bg-white text-black shadow text-center font-semibold p-1 w-28"
-              >
-                <i class="fa-solid fa-arrow-down rotate-270"></i>
-                About Us
-              </h2>
-            </div>
-            <div class="p-3">
-              <h1 class="text-4xl font-bold">
-                We design thoughtful,<br />
-                liveable spaces
-              </h1>
-            </div>
-            <div class="p-3">
-              <p>
-                The barn house captivates with its blend of rustic charm and
-                modern sophistication, featuring weathered wood, sleek metal
-                accents.
-              </p>
-            </div>
-
-            <!-- House Projects -->
-            <div
-              class="lg:space-y-3 flex lg:flex flex-col md:flex-row lg:flex-col gap-2 justify-around"
+        <div>
+          <div class="flex items-center p-3">
+            <h2
+              class="rounded-full bg-white text-black shadow text-center font-semibold p-1 w-28"
             >
-              <!-- commercial house -->
-              <div
-                class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
-              >
-                <div>
-                  <img src="./assets/commercial.png" alt="commercial house" />
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold">Commercial</h3>
-                  <p>
-                    The barn house captivates with its blend <br />
-                    of rustic charm and modern.
-                  </p>
-                </div>
-              </div>
-              <!-- Residential house -->
-              <div
-                class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
-              >
-                <div>
-                  <img src="./assets/residential.png" alt="residential house" />
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold">Residential</h3>
-                  <p>
-                    The barn house captivates with its blend <br />
-                    of rustic charm and modern.
-                  </p>
-                </div>
-              </div>
-            </div>
+              <i class="fa-solid fa-arrow-down rotate-270"></i>
+              About Us
+            </h2>
+          </div>
+          <div class="p-3">
+            <h1 class="text-4xl font-bold">
+              We design thoughtful,<br />
+              liveable spaces
+            </h1>
+          </div>
+          <div class="p-3">
+            <p>
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
           </div>
 
-          <!-- Image div -->
-          <div class="p-2 md:p-2 w-full">
-            <img
-              src="./assets/second-house.png"
-              alt=""
-              class="w-full rounded-lg lg:w-[87%] lg:m-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- Statistics section -->
-
-      <section class="statistics">
-        <div class="py-10 lg:mr-10">
+          <!-- House Projects -->
           <div
-            class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-5 bg-white rounded-xl shadow mx-10 lg:mx-13 p-6"
+            class="lg:space-y-3 flex lg:flex flex-col md:flex-row lg:flex-col gap-2 justify-around"
           >
-            <!-- Card No -1 -->
-            <div class="card">
-              <div class="card-body items-center">
-                <div class="text-blue-400 text-7xl text-center">
-                  <i class="fa-regular fa-message"></i>
-                </div>
-                <h2 class="card-title">
-                  235<span class="text-gray-800 text-sm badge badge-info"
-                    >+</span
-                  >
-                </h2>
-                <p class="text-sm text-gray-900">Happy Client Review</p>
+            <!-- commercial house -->
+            <div
+              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+            >
+              <div>
+                <img src="./assets/commercial.png" alt="commercial house" />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Commercial</h3>
+                <p>
+                  The barn house captivates with its blend <br />
+                  of rustic charm and modern.
+                </p>
               </div>
             </div>
-            <!-- Card No-2 -->
-            <div class="card">
-              <div class="card-body items-center">
-                <div class="text-blue-400 text-7xl text-center">
-                  <i class="fa-solid fa-building"></i>
-                </div>
-                <h2 class="card-title">
-                  50<span class="text-gray-800 text-sm badge badge-info"
-                    >+</span
-                  >
-                </h2>
-                <p class="text-sm text-gray-900">Work Departments</p>
+            <!-- Residential house -->
+            <div
+              class="bg-white rounded-lg shadow flex gap-4 p-2 lg:p-5 items-center"
+            >
+              <div>
+                <img src="./assets/residential.png" alt="residential house" />
               </div>
-            </div>
-            <!-- Card No-3 -->
-            <div class="card">
-              <div class="card-body items-center">
-                <div class="text-blue-400 text-7xl text-center">
-                  <i class="fa-solid fa-users"></i>
-                </div>
-                <h2 class="card-title">
-                  30K<span class="text-gray-800 text-sm badge badge-info"
-                    >+</span
-                  >
-                </h2>
-                <p class="text-sm text-gray-900">Our Happy Client</p>
-              </div>
-            </div>
-            <!-- Card No-4 -->
-            <div class="card">
-              <div class="card-body items-center">
-                <div class="text-blue-400 text-7xl text-center">
-                  <i class="fa-solid fa-people-group"></i>
-                </div>
-                <h2 class="card-title">
-                  307<span class="text-gray-800 text-sm badge badge-info"
-                    >+</span
-                  >
-                </h2>
-                <p class="text-sm text-gray-900">Staff Members</p>
+              <div>
+                <h3 class="text-lg font-semibold">Residential</h3>
+                <p>
+                  The barn house captivates with its blend <br />
+                  of rustic charm and modern.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Working Process -->
-      <section class="working-process mx-15">
-        <div class="py-5 mx-auto text-center w-40">
-          <h4 class="bg-white rounded-lg shadow">
-            <span>
-              <i class="fa-solid fa-arrow-down rotate-270 p-0.5"></i
-            ></span>
-            How we work
-          </h4>
+        <!-- Image div -->
+        <div class="p-2 md:p-2 w-full">
+          <img
+            src="./assets/second-house.png"
+            alt=""
+            class="w-full rounded-lg lg:w-[87%] lg:m-auto"
+          />
         </div>
+      </div>
+    </section>
 
-        <div class="text-center">
-          <h1 class="text-5xl font-bold">Our Works Process</h1>
-          <p class="py-6">
-            The barn house captivates with its blend of rustic charm and modern
-            sophistication,<br />
-            featuring weathered wood, sleek metal accents.
-          </p>
-        </div>
-        <!-- card section of working process -->
+    <!-- Statistics section -->
+
+    <section class="statistics">
+      <div class="py-10 lg:mr-10">
         <div
-          class="working-sector grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-5 rounded-xl mx-1 lg:mx- p-6"
+          class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-5 bg-white rounded-xl shadow mx-10 lg:mx-13 p-6"
         >
-          <!-- card no-1 -->
-          <div class="card bg-pink-300 rounded-2xl">
-            <div class="card-body items-center text-center">
-              <div class="card-icon text-7xl text-orange-400 text-center">
-                <i class="fa-solid fa-lightbulb"></i>
-              </div>
-
-              <h2 class="card-title">Concept</h2>
-              <p>
-                Rustic charm, sustainable design, open spaces, natural
-                materials, modern comfort, functional living.
-              </p>
-            </div>
-          </div>
-
-          <!-- card no-2 -->
-          <div class="card bg-yellow-300 rounded-2xl">
-            <div class="card-body items-center text-center">
-              <div class="card-icon text-7xl text-white text-center">
-                <i class="fa-solid fa-diagram-project"></i>
-              </div>
-
-              <h2 class="card-title">Design Process</h2>
-              <p>
-                Conceptualize vision, plan layout, select materials, integrate
-                sustainability, refine, construct, evaluate.
-              </p>
-            </div>
-          </div>
-
-          <!-- card no-3 -->
-          <div class="card bg-green-300 rounded-2xl">
-            <div class="card-body items-center text-center">
-              <div class="card-icon text-7xl text-blue-800 text-center">
-                <i class="fa-solid fa-eye"></i>
-              </div>
-
-              <h2 class="card-title">supervison</h2>
-              <p>
-                Monitor progress, ensure quality, guide workers, resolve issues,
-                maintain safety standards.
-              </p>
-            </div>
-          </div>
-
-          <!-- card no-4 -->
-          <div class="card bg-sky-300 rounded-2xl text-center">
+          <!-- Card No -1 -->
+          <div class="card">
             <div class="card-body items-center">
-              <div class="card-icon text-7xl text-yellow-400 text-center">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
+              <div class="text-blue-400 text-7xl text-center">
+                <i class="fa-regular fa-message"></i>
               </div>
-
-              <h2 class="card-title">Concept</h2>
-              <p>
-                Estimate costs, allocate resources, track expenses, adjust
-                forecasts, ensure financial efficiency
-              </p>
+              <h2 class="card-title">
+                235<span class="text-gray-800 text-sm badge badge-info">+</span>
+              </h2>
+              <p class="text-sm text-gray-900">Happy Client Review</p>
+            </div>
+          </div>
+          <!-- Card No-2 -->
+          <div class="card">
+            <div class="card-body items-center">
+              <div class="text-blue-400 text-7xl text-center">
+                <i class="fa-solid fa-building"></i>
+              </div>
+              <h2 class="card-title">
+                50<span class="text-gray-800 text-sm badge badge-info">+</span>
+              </h2>
+              <p class="text-sm text-gray-900">Work Departments</p>
+            </div>
+          </div>
+          <!-- Card No-3 -->
+          <div class="card">
+            <div class="card-body items-center">
+              <div class="text-blue-400 text-7xl text-center">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h2 class="card-title">
+                30K<span class="text-gray-800 text-sm badge badge-info">+</span>
+              </h2>
+              <p class="text-sm text-gray-900">Our Happy Client</p>
+            </div>
+          </div>
+          <!-- Card No-4 -->
+          <div class="card">
+            <div class="card-body items-center">
+              <div class="text-blue-400 text-7xl text-center">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <h2 class="card-title">
+                307<span class="text-gray-800 text-sm badge badge-info">+</span>
+              </h2>
+              <p class="text-sm text-gray-900">Staff Members</p>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Working Process -->
+    <section class="working-process mx-15">
+      <div class="py-5 mx-auto text-center w-40">
+        <h4 class="bg-white rounded-lg shadow">
+          <span> <i class="fa-solid fa-arrow-down rotate-270 p-0.5"></i></span>
+          How we work
+        </h4>
+      </div>
+
+      <div class="text-center">
+        <h1 class="text-5xl font-bold">Our Works Process</h1>
+        <p class="py-6">
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication,<br />
+          featuring weathered wood, sleek metal accents.
+        </p>
+      </div>
+      <!-- card section of working process -->
+      <div
+        class="working-sector grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 my-5 rounded-xl mx-1 lg:mx- p-6"
+      >
+        <!-- card no-1 -->
+        <div class="card bg-pink-300 rounded-2xl">
+          <div class="card-body items-center text-center">
+            <div class="card-icon text-7xl text-orange-400 text-center">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h2 class="card-title">Concept</h2>
+            <p>
+              Rustic charm, sustainable design, open spaces, natural materials,
+              modern comfort, functional living.
+            </p>
+          </div>
+        </div>
+
+        <!-- card no-2 -->
+        <div class="card bg-yellow-300 rounded-2xl">
+          <div class="card-body items-center text-center">
+            <div class="card-icon text-7xl text-white text-center">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+
+            <h2 class="card-title">Design Process</h2>
+            <p>
+              Conceptualize vision, plan layout, select materials, integrate
+              sustainability, refine, construct, evaluate.
+            </p>
+          </div>
+        </div>
+
+        <!-- card no-3 -->
+        <div class="card bg-green-300 rounded-2xl">
+          <div class="card-body items-center text-center">
+            <div class="card-icon text-7xl text-blue-800 text-center">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h2 class="card-title">supervison</h2>
+            <p>
+              Monitor progress, ensure quality, guide workers, resolve issues,
+              maintain safety standards.
+            </p>
+          </div>
+        </div>
+
+        <!-- card no-4 -->
+        <div class="card bg-sky-300 rounded-2xl text-center">
+          <div class="card-body items-center">
+            <div class="card-icon text-7xl text-yellow-400 text-center">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+
+            <h2 class="card-title">Concept</h2>
+            <p>
+              Estimate costs, allocate resources, track expenses, adjust
+              forecasts, ensure financial efficiency
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- portfolio section -->
     <section class="bg-portfolio">
@@ -467,7 +462,7 @@
               <div class="flex items-center gap-2 justify-center mt-2">
                 <p class="text-xl font-semibold">view details</p>
                 <div
-                  class="bg-[#ABEF5F80] rounded-full w-7 h-7 text-xl font-semibold"
+                  class="bg-bg-button-two rounded-full w-7 h-7 text-xl font-semibold"
                 >
                   <i class="fa-solid fa-arrow-down rotate-230"></i>
                 </div>
@@ -501,7 +496,7 @@
               <div class="flex items-center gap-2 justify-center mt-2">
                 <p class="text-xl font-semibold">view details</p>
                 <div
-                  class="bg-[#ABEF5F80] rounded-full w-7 h-7 text-xl font-semibold"
+                  class="bg-button-two rounded-full w-7 h-7 text-xl font-semibold"
                 >
                   <i class="fa-solid fa-arrow-down rotate-230"></i>
                 </div>
@@ -780,7 +775,7 @@
       <div class="mt-10">
         <div class="text-2xl font-semibold flex gap-2 justify-center pt-5">
           <div
-            class="bg-[#ABEF5F] rounded-full flex w-7 h-7 text-center justify-center items-center"
+            class="bg-arrow-icon rounded-full flex w-7 h-7 text-center justify-center items-center"
           >
             <i class="fa-solid fa-arrow-down rotate-230"></i>
           </div>
@@ -812,7 +807,7 @@
       <div class="p-10">
         <button
           type=""
-          class="flex btn bg-[#ABEF5F] rounded-full mx-auto text-md font-bold text-center justify-center items-center gap-"
+          class="flex btn bg-arrow-icon rounded-full mx-auto text-md font-bold text-center justify-center items-center gap-"
         >
           Book Consult
 
